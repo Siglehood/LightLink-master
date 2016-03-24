@@ -179,7 +179,16 @@ public class AdvancedColorPicker extends LinearLayout {
 		this.mWedgeListener = listener;
 	}
 
+	/**
+	 * 楔块监听接口
+	 */
 	public interface OnWedgeSelectedListener {
+		/**
+		 * 楔块选择的回调
+		 * 
+		 * @param position
+		 *            楔块的位置
+		 */
 		public void onWedgeSelected(int position);
 	}
 
@@ -303,11 +312,33 @@ public class AdvancedColorPicker extends LinearLayout {
 		this.mHsvListener = listener;
 	}
 
+	/**
+	 * HSV拖动条监听接口
+	 */
 	public interface OnHsvSeekBarChangedListener {
+
+		/**
+		 * 色度改变的回调
+		 * 
+		 * @param hue
+		 *            色度
+		 */
 		public void onHueChanged(byte hue);
 
+		/**
+		 * 饱和度改变的回调
+		 * 
+		 * @param sat
+		 *            饱和度
+		 */
 		public void onSatChanged(byte sat);
 
+		/**
+		 * 亮度改变的回调
+		 * 
+		 * @param val
+		 *            亮度
+		 */
 		public void onValChanged(byte val);
 	}
 
